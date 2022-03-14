@@ -1,21 +1,9 @@
 {
-    "[proto3]": {
-        "editor.defaultFormatter": "xaver.clang-format"
-    },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[less]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "terminal.integrated.env.windows": {
+        "PATH": "${cwd}\\misc\\tmd-gcc\\bin;${cwd}\\misc\\python37;${env:PATH}",
     },
     "editor.defaultFormatter": null,
     "extensions.ignoreRecommendations": false,
@@ -26,7 +14,7 @@
     "files.eol": "\n",
     "files.encoding": "utf8",
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 500,
+    "files.autoSaveDelay": 5000,
     "editor.tabSize": 4,
     "editor.formatOnType": true,
     "editor.formatOnSaveMode": "file",
@@ -35,9 +23,9 @@
     "editor.parameterHints.enabled": true,
     "editor.tabCompletion": "on",
     "editor.insertSpaces": false,
-    "go.testTimeout": "60s",
+    "go.testTimeout": "3600s",
     "go.testFlags": [
-        "-v"
+        "-v",
     ],
     "go.docsTool": "gogetdoc",
     "go.formatTool": "gofumpt",
@@ -46,7 +34,7 @@
     "go.lintOnSave": "package",
     "go.lintFlags": [
         "--fast",
-        "--fix"
+        "--fix",
     ],
     "go.vetOnSave": "package",
     "go.vetFlags": [
@@ -83,7 +71,8 @@
     "go.toolsEnvVars": {
         "GOOS": "windows",
         "GOARCH": "amd64",
-        "CGO_ENABLED": 1,
+        "CGO_ENABLED": "1",
+        "GO111MODULE": "auto",
     },
     "clang-format.style": "google",
     "clang-format.language.proto.enable": true,
@@ -99,4 +88,5 @@
     "files.watcherExclude": {
         "**/target": true
     },
+    "git.ignoreLimitWarning": true // 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
 }
